@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{C5D3026C-6253-842A-A822-4FCE049BB943}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interactions.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="43" Column="15" />
+      <File FileName="Assets/Scripts/borrar.cs" Line="78" Column="1" />
+      <File FileName="Assets/Scripts/CameraFollows.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/Interactions.cs" Line="14" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
