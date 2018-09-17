@@ -5,19 +5,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    Rigidbody2D myRB;           // me refiero al cuerpo del personaje
-    bool facingRight = true;    // arranca mirando hacia la derecha
+    //Movimientos
     public float maxSpeed;
+    public bool facingRight = true;            // arranca mirando hacia la derecha
+    public bool canMove = true;        // es para la transicion entre un salto y correr
+
+    //Componentes
+    Rigidbody2D myRB;           // me refiero al cuerpo del personaje
     SpriteRenderer myRenderer;  // accedo a Sprite Renderer 
     Animator myAnim;            // accedo a la animacion de Animator
 
+    // Salto
     bool grounded = false;          // comienza en el aire, cundo toca el suelo es True
     float groundCheckRadius = 0.2f; //es el radio que pongo en los pies del personaje!, en este caso SÈ que es 0.2
     public LayerMask groundLayer;   // me dice que es para chequear lo que toc mi circulo!! en este caso la capa de tierra
     public Transform groundCheck;   // Es la location para el circulo que me dice donde estoy en la tierra
     public float jumpPower;         // potencia del salto
-    private bool canMove = true;      // es para la transicion entre un salto y correr
 
 
     // Use this for initialization, y acceso real al componente, arriba solo defino
@@ -38,10 +41,12 @@ public class PlayerController : MonoBehaviour
             myRB.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);  //using a force to make our character jump
             grounded = false;
         }
-
+        //check if grounded 
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer); //draw a circle to check for ground
         myAnim.SetBool("isGrounded", grounded);
 
+
+        //running code
         float move = Input.GetAxis("Horizontal");
 
         if (canMove)
