@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{DAAF60C8-83DE-9964-99FB-0390A82E21FB}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerInventory.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interactions.cs">
     <Files>
       <File FileName="Assets/Scripts/Interactions.cs" Line="8" Column="1" />
       <File FileName="Assets/Scripts/PlayerController.cs" Line="66" Column="35" />
-      <File FileName="Assets/CoinController.cs" Line="5" Column="1" />
-      <File FileName="Assets/Scripts/PlayerInventory.cs" Line="10" Column="25" />
+      <File FileName="Assets/Scripts/PlayerInventory.cs" Line="10" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
