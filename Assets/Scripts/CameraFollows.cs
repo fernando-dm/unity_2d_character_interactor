@@ -1,26 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CameraFollows : MonoBehaviour {
-     Vector3 offset;
-     
-    public Transform target;
+public class CameraFollows : MonoBehaviour
+{
+    private Vector3 offset;
     public float smoothing = 5f;
 
+    public Transform target;
+
     // Use this for initialization
-    void Start () {
+    private void Start()
+    {
         offset = transform.position - target.position;
-		
-	}
+    }
     //private void Update()
     //{
     //    FixedUpdate();
     //}
 
     // Update is called once per frame
-    void FixedUpdate () {
-        Vector3 targetCamPos = target.position + offset;
+    private void FixedUpdate()
+    {
+        var targetCamPos = target.position + offset;
         transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
-	}
+    }
 }

@@ -8,7 +8,9 @@
           <e p="CameraFollows.cs" t="Include" />
           <e p="CoinController.cs" t="Include" />
           <e p="Interactions.cs" t="Include" />
+          <e p="PlayerButtonMovement.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PlayerController2.cs" t="Include" />
           <e p="PlayerInventory.cs" t="Include" />
         </e>
       </e>
@@ -22,5 +24,6 @@
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_unity_2d_character_interactor.-402274580.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
   </component>
 </project>

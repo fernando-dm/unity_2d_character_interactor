@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerInventory : MonoBehaviour {
+public class PlayerInventory : MonoBehaviour
+{
     public int coins;
 
-	public void AddCoins() {
+    public void AddCoins()
+    {
         coins++;
         print("Coins Collected" + coins);
-		
-	}
+    }
 }

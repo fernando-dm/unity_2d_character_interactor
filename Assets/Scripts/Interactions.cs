@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
-public class Interactions : MonoBehaviour {
-
+public class Interactions : MonoBehaviour
+{
     //void OnTriggerEnter2D(Collider2D other){
     //    print("Enter");
     //}
