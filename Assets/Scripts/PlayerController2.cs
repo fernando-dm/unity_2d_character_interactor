@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerController2 : MonoBehaviour
 {
@@ -12,7 +14,6 @@ public class PlayerController2 : MonoBehaviour
     public Transform GroundCheck; // Es la location para el circulo que me dice donde estoy en la tierra
     readonly float groundCheckRadius = 0.2f; //es el radio que pongo en los pies del personaje!, en este caso SÈ que es 0.2
 
-
     //Movimientos
     public float MaxSpeed;
     public float Move;
@@ -21,10 +22,11 @@ public class PlayerController2 : MonoBehaviour
     //Componentes
     private Rigidbody2D _myRb; // me refiero al cuerpo del personaje
     private SpriteRenderer _myRenderer; // accedo a Sprite Renderer 
-    Animator _knightAnimator; // animaciones
-
+    private Animator _knightAnimator; // animaciones
     
-    public string Flag = "Idle"; // flag default en idle, luego sobreeescribo
+    public string MovingDirection = "Idle"; // flag default en idle, luego sobreeescribo
+
+    private Dictionary<string, Action>_actionMap = new Dictionary<string, Action>();
 
     // Use this for initialization, y acceso real al componente, arriba solo defino
     private void Start()
@@ -33,6 +35,12 @@ public class PlayerController2 : MonoBehaviour
         _myRenderer = GetComponent<SpriteRenderer>();
         GetComponent<Animator>();
         _knightAnimator = GetComponent<Animator>();
+        
+        _actionMap.Add("Right", RightMove); 
+        _actionMap.Add("Left", LeftMove);
+        _actionMap.Add("Jump", JumpMove);
+        _actionMap.Add("Idle", IdleMove);
+        
     }
 
     // Update is called once per frame
@@ -42,70 +50,55 @@ public class PlayerController2 : MonoBehaviour
         _grounded = Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, GroundLayer); //draw a circle to check for ground
 
         //Moving code
-        MovingActions(Flag);
-
+        _actionMap[MovingDirection].Invoke();
     }
 
-    public void MovingActions(string flag)
-    {
-        Flag = flag;
-        RightMove(Flag);
-        LeftMove(Flag);
-        JumpMove(Flag);
-        IdleMove(Flag);
-        
-    }
 
-    
-    public void RightMove(string flag)
+    public void RightMove()
     {
-        Flag = flag;
-        if (Input.GetKey(KeyCode.D) || Flag.Equals("Right"))
+        if (Input.GetKey(KeyCode.D) || MovingDirection.Equals("Right"))
         {
             _myRenderer.flipX = false;
             Move = 1;
             _myRb.velocity = new Vector2(Move * MaxSpeed, _myRb.velocity.y);
-            Debug.Log("toque D o derecha " + flag + " move: " + Move + " maxspeed " + MaxSpeed);
+//            Debug.Log("toque D o derecha " + flag + " move: " + Move + " maxspeed " + MaxSpeed);
             KnightRunAnimator();
         }
     }
     
-    public void LeftMove(string flag)
+    public void LeftMove()
     {
-        Flag = flag;
-        if (Input.GetKey(KeyCode.A) || Flag.Equals("Left"))
+        if (Input.GetKey(KeyCode.A) || MovingDirection.Equals("Left"))
         {
             _myRenderer.flipX = true;
             Move = -1;
             _myRb.velocity = new Vector2(Move * MaxSpeed, _myRb.velocity.y);
-            Debug.Log("toque D o izquierda " + flag + " move: " + Move + " maxspeed " + MaxSpeed );
+//            Debug.Log("toque D o izquierda " + flag + " move: " + Move + " maxspeed " + MaxSpeed );
             KnightRunAnimator();
         }
     }
     
-    public void IdleMove(string flag)
+    public void IdleMove()
     {
-        Flag = flag;
-        if (Flag.Equals("Idle") && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) )
+        if (MovingDirection.Equals("Idle") && (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) )
         {
             Move = 0f;
             _myRb.velocity = new Vector2(Move * MaxSpeed, _myRb.velocity.y);
-            Debug.Log("no toque nada " + flag + " move: " + Move + " maxspeed " + MaxSpeed );
+//            Debug.Log("no toque nada " + flag + " move: " + Move + " maxspeed " + MaxSpeed );
             KnightIdleAnimator();
         }
     }
     
-    public void JumpMove(string flag)
+    public void JumpMove()
     {
-        Flag = flag;
         _jump = Input.GetKey(KeyCode.Space);
         
-        if ((CanMove && _grounded && _jump)|| (Flag.Equals("Jump")&& _grounded) ) // si puedo moverme y estoy en tierra, puedo saltar!
+        if ((CanMove && _grounded && _jump)|| (MovingDirection.Equals("Jump")&& _grounded) ) // si puedo moverme y estoy en tierra, puedo saltar!
         {
             _myRb.velocity = new Vector2(_myRb.velocity.x, 0f); //make sure out force is the same each jump
             _myRb.AddForce(new Vector2(0, JumpPower), ForceMode2D.Impulse); //using a force to make our character jump
             _grounded = false;
-            Debug.Log("toque jump o space " + flag + " move: " + Move + " maxspeed " + JumpPower + " grounded "+_grounded);
+//            Debug.Log("toque jump o space " + flag + " move: " + Move + " maxspeed " + JumpPower + " grounded "+_grounded);
         }
     }
 
