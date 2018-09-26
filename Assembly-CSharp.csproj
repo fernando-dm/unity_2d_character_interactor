@@ -56,9 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\CameraFollows.cs" />
     <Compile Include="Assets\Scripts\CoinController.cs" />
+    <Compile Include="Assets\Scripts\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\Interactions.cs" />
     <Compile Include="Assets\Scripts\PlayerButtonMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />

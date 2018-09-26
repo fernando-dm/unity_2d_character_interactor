@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0162aab9-86c1-4683-be40-03871414e340" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.unity_2d_character_interactor/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity_2d_character_interactor/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unity_2d_character_interactor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity_2d_character_interactor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DestroyMe.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DestroyMe.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/CoinBase.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/CoinBase.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1f/1f8d0d0b5b5b94030bc0827546931d97" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1f/1f8d0d0b5b5b94030bc0827546931d97" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/ba/ba557610001c945af8624cb4fd05d522" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ba/ba557610001c945af8624cb4fd05d522" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/dc/dcdd7e4c5c1db4e728e79b27cfae7b47" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/dc/dcdd7e4c5c1db4e728e79b27cfae7b47" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <list id="c7c2eb41-1a88-4d90-ad66-603c37bb7673" name="KnightIdle" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,13 +47,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="5177" />
+          <entry key="cs" value="5274" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="5177" />
+          <entry key="C#" value="5274" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
@@ -109,54 +114,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Interactions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding>
-                <marker date="1537534254778" expanded="true" signature="61:318" ph="{...}" />
-                <marker date="1537534254778" expanded="true" signature="68:316" ph="/* void OnTriggerEnter2D(Collider2D other){ ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CoinController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="270">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
-                <marker date="1537973422959" expanded="true" signature="63:629" ph="{...}" />
-                <marker date="1537973422959" expanded="true" signature="147:627" ph="{...}" />
-                <marker date="1537973422959" expanded="true" signature="188:621" ph="{...}" />
+                <marker date="1537977253948" expanded="true" signature="63:686" ph="{...}" />
+                <marker date="1537977253948" expanded="true" signature="147:684" ph="{...}" />
+                <marker date="1537977253948" expanded="true" signature="188:678" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/DestroyMe.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-              <folding>
-                <marker date="1537973740707" expanded="false" signature="6:78" ph="..." />
-                <marker date="1537973740707" expanded="true" signature="119:241" ph="{...}" />
-                <marker date="1537973740707" expanded="true" signature="193:236" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInventory.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="14" column="7" selection-start-line="11" selection-end-line="14" selection-end-column="7" />
               <folding>
-                <marker date="1537534254772" expanded="true" signature="64:189" ph="{...}" />
-                <marker date="1537534254772" expanded="true" signature="116:187" ph="{...}" />
+                <marker date="1537982357681" expanded="true" signature="6:73" ph="..." />
+                <marker date="1537982357681" expanded="true" signature="119:396" ph="{...}" />
+                <marker date="1537982357681" expanded="true" signature="175:253" ph="/* void Start() ... */" />
+                <marker date="1537982357681" expanded="true" signature="281:394" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -181,7 +161,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoinController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DestroyMe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerButtonMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ECB5D8E2-0A91-44BC-A4F2-58317D1E56F9/02/c94591c5/Single.cs" root0="SKIP_HIGHLIGHTING" />
@@ -196,8 +175,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerButtonMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController2.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CoinController.cs" />
         <option value="$PROJECT_DIR$/Assets/DestroyMe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInventory.cs" />
       </list>
     </option>
   </component>
@@ -300,12 +280,12 @@
       <workItem from="1537564198494" duration="670000" />
       <workItem from="1537658083338" duration="1996000" />
       <workItem from="1537792539912" duration="9651000" />
-      <workItem from="1537808723471" duration="22018000" />
+      <workItem from="1537808723471" duration="23406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98474000" />
+    <option name="totallyTimeSpent" value="99862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,17 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInventory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding>
-            <marker date="1537534254772" expanded="true" signature="64:189" ph="{...}" />
-            <marker date="1537534254772" expanded="true" signature="116:187" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController2.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -479,6 +448,13 @@
             <marker date="1537970270992" expanded="true" signature="4046:4102" ph="{...}" />
             <marker date="1537970270992" expanded="true" signature="4139:4194" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/DestroyMe.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -508,24 +484,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CoinController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="270">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
-            <marker date="1537973422959" expanded="true" signature="63:629" ph="{...}" />
-            <marker date="1537973422959" expanded="true" signature="147:627" ph="{...}" />
-            <marker date="1537973422959" expanded="true" signature="188:621" ph="{...}" />
+            <marker date="1537977253948" expanded="true" signature="63:686" ph="{...}" />
+            <marker date="1537977253948" expanded="true" signature="147:684" ph="{...}" />
+            <marker date="1537977253948" expanded="true" signature="188:678" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/DestroyMe.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInventory.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="210">
+          <caret line="14" column="7" selection-start-line="11" selection-end-line="14" selection-end-column="7" />
           <folding>
-            <marker date="1537973740707" expanded="false" signature="6:78" ph="..." />
-            <marker date="1537973740707" expanded="true" signature="119:241" ph="{...}" />
-            <marker date="1537973740707" expanded="true" signature="193:236" ph="{...}" />
+            <marker date="1537982357681" expanded="true" signature="6:73" ph="..." />
+            <marker date="1537982357681" expanded="true" signature="119:396" ph="{...}" />
+            <marker date="1537982357681" expanded="true" signature="175:253" ph="/* void Start() ... */" />
+            <marker date="1537982357681" expanded="true" signature="281:394" ph="{...}" />
           </folding>
         </state>
       </provider>

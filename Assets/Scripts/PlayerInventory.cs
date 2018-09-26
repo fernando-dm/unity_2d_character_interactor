@@ -1,12 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public int coins;
+    public int Coins=0;
+
+
+    public Text CoinText;
+
+    void Start()
+    {
+        CoinText.text = Coins.ToString();
+    }
 
     public void AddCoins()
     {
-        coins++;
-        print("Coins Collected" + coins);
+        Coins++;
+        CoinText.text = Coins.ToString();
+        print("Coins Collected" + Coins);
     }
 }
