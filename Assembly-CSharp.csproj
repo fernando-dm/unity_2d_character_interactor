@@ -59,10 +59,12 @@
     <Compile Include="Assets\Scripts\CameraFollows.cs" />
     <Compile Include="Assets\Scripts\CoinController.cs" />
     <Compile Include="Assets\Scripts\DestroyMe.cs" />
+    <Compile Include="Assets\Scripts\GameCleanerController.cs" />
     <Compile Include="Assets\Scripts\Interactions.cs" />
     <Compile Include="Assets\Scripts\PlayerButtonMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerController2.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerInventory.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/fernando/Documents/desarrollo/UnityProjects/unity_2d_character_interactor/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

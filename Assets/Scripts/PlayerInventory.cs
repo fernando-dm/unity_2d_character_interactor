@@ -19,5 +19,7 @@ public class PlayerInventory : MonoBehaviour
         Coins++;
         CoinText.text = Coins.ToString();
         print("Coins Collected" + Coins);
+        if (Coins==3)
+            GetComponent<PlayerHealth>().EndGame();
     }
 }
