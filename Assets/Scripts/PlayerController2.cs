@@ -50,8 +50,8 @@ public class PlayerController2 : MonoBehaviour
         _grounded = Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, GroundLayer); //draw a circle to check for ground
 
         //Moving code
-        _actionMap[MovingDirection].Invoke(); //unicamente se activa cuando tiene un Flag de Button
-//        MovingByKeyBoardAndButton();
+//        _actionMap[MovingDirection].Invoke(); //unicamente se activa cuando tiene un Flag de Button
+        MovingByKeyBoardAndButton();
     }
 
     private void MovingByKeyBoardAndButton()
@@ -66,7 +66,6 @@ public class PlayerController2 : MonoBehaviour
     public void RightMove()
     {
 //        print("derecha " +Input.touches.Length);
-        
         if (Input.GetKey(KeyCode.D) || MovingDirection.Equals("Right"))
         {
             _myRenderer.flipX = false;
