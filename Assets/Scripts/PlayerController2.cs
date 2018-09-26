@@ -26,8 +26,8 @@ public class PlayerController2 : MonoBehaviour
     
     public string MovingDirection = "Idle"; // flag default en idle, luego sobreeescribo
 
-    private Dictionary<string, Action>_actionMap = new Dictionary<string, Action>();
-
+    private static Dictionary<string, Action> _actionMap = new Dictionary<string, Action>();
+    
     // Use this for initialization, y acceso real al componente, arriba solo defino
     private void Start()
     {
@@ -50,12 +50,23 @@ public class PlayerController2 : MonoBehaviour
         _grounded = Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, GroundLayer); //draw a circle to check for ground
 
         //Moving code
-        _actionMap[MovingDirection].Invoke();
+        _actionMap[MovingDirection].Invoke(); //unicamente se activa cuando tiene un Flag de Button
+//        MovingByKeyBoardAndButton();
+    }
+
+    private void MovingByKeyBoardAndButton()
+    {
+        RightMove();
+        LeftMove();
+        IdleMove();
+        JumpMove();
     }
 
 
     public void RightMove()
     {
+//        print("derecha " +Input.touches.Length);
+        
         if (Input.GetKey(KeyCode.D) || MovingDirection.Equals("Right"))
         {
             _myRenderer.flipX = false;
@@ -73,20 +84,19 @@ public class PlayerController2 : MonoBehaviour
             _myRenderer.flipX = true;
             Move = -1;
             _myRb.velocity = new Vector2(Move * MaxSpeed, _myRb.velocity.y);
-//            Debug.Log("toque D o izquierda " + flag + " move: " + Move + " maxspeed " + MaxSpeed );
             KnightRunAnimator();
         }
     }
     
     public void IdleMove()
     {
-        if (MovingDirection.Equals("Idle") && (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) )
-        {
-            Move = 0f;
-            _myRb.velocity = new Vector2(Move * MaxSpeed, _myRb.velocity.y);
-//            Debug.Log("no toque nada " + flag + " move: " + Move + " maxspeed " + MaxSpeed );
-            KnightIdleAnimator();
-        }
+        //chequear que no este saltando
+            if (_grounded && MovingDirection.Equals("Idle") && (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)))
+            {
+                Move = 0f;
+                _myRb.velocity = new Vector2(Move * MaxSpeed, _myRb.velocity.y);
+                KnightIdleAnimator();
+            }
     }
     
     public void JumpMove()
@@ -96,9 +106,8 @@ public class PlayerController2 : MonoBehaviour
         if ((CanMove && _grounded && _jump)|| (MovingDirection.Equals("Jump")&& _grounded) ) // si puedo moverme y estoy en tierra, puedo saltar!
         {
             _myRb.velocity = new Vector2(_myRb.velocity.x, 0f); //make sure out force is the same each jump
-            _myRb.AddForce(new Vector2(0, JumpPower), ForceMode2D.Impulse); //using a force to make our character jump
+            _myRb.AddForce(new Vector2(0f, JumpPower), ForceMode2D.Impulse); //using a force to make our character jump
             _grounded = false;
-//            Debug.Log("toque jump o space " + flag + " move: " + Move + " maxspeed " + JumpPower + " grounded "+_grounded);
         }
     }
 

@@ -18,6 +18,7 @@ public class PlayerButtonMovement : MonoBehaviour
     {
         _buttonPress = EventSystem.current.currentSelectedGameObject.name;
         player.MovingDirection = "Idle";
+
 //        print("OnMouseUp " + _buttonPress);
     }
 
