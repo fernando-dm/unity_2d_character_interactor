@@ -26,7 +26,7 @@ public class PlayerController2 : MonoBehaviour
     
     public string MovingDirection = "Idle"; // flag default en idle, luego sobreeescribo
 
-    private static Dictionary<string, Action> _actionMap = new Dictionary<string, Action>();
+    private Dictionary<string, Action> _actionMap = new Dictionary<string, Action>();
     
     // Use this for initialization, y acceso real al componente, arriba solo defino
     private void Start()
@@ -36,11 +36,10 @@ public class PlayerController2 : MonoBehaviour
         GetComponent<Animator>();
         _knightAnimator = GetComponent<Animator>();
         
-        _actionMap.Add("Right", RightMove); 
-        _actionMap.Add("Left", LeftMove);
-        _actionMap.Add("Jump", JumpMove);
-        _actionMap.Add("Idle", IdleMove);
-        
+            _actionMap.Add("Right", RightMove); 
+            _actionMap.Add("Left", LeftMove);
+            _actionMap.Add("Jump", JumpMove);
+            _actionMap.Add("Idle", IdleMove);
     }
 
     // Update is called once per frame
@@ -50,8 +49,8 @@ public class PlayerController2 : MonoBehaviour
         _grounded = Physics2D.OverlapCircle(GroundCheck.position, groundCheckRadius, GroundLayer); //draw a circle to check for ground
 
         //Moving code
-//        _actionMap[MovingDirection].Invoke(); //unicamente se activa cuando tiene un Flag de Button
-        MovingByKeyBoardAndButton();
+        _actionMap[MovingDirection].Invoke(); //unicamente se activa cuando tiene un Flag de Button
+//        MovingByKeyBoardAndButton();
     }
 
     private void MovingByKeyBoardAndButton()

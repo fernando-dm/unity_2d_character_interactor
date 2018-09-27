@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         EndText = "YouDied";
         EndGame();
-        EndScreen.color = Color.white;  // con esto me habilita la imagen que deshabilite con los alpha
+        EndScreen.color = Color.white;  // con esto me habilita la imagen que deshabilite con los alpha (marco rojo)
 //        Instantiate(EndScreen, transform.position, Quaternion.identity);
         Destroy(gameObject);
 //        Destroy(gameObject.transform.root.gameObject);
@@ -23,7 +23,8 @@ public class PlayerHealth : MonoBehaviour {
     public void EndGame()
     {
         EndGameUIText.text= EndText;
-        EndCGP.alpha = 1;
+        EndCGP.alpha = 1; // activo cartel de fin de juego (EndGamePanel)
         Debug.Log(EndText);
+        Destroy(gameObject);
     }
 }

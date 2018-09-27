@@ -12,7 +12,6 @@ public class GameCleanerController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerHealth>().MakeDead();
-
         }
     }
 

@@ -1,0 +1,4 @@
+#Thu Sep 27 15:12:01 ART 2018
+base.0=/Users/fernando/Documents/desarrollo/UnityProjects/unity_2d_character_interactor/Temp/gradleOut/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex

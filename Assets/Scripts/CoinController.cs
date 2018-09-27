@@ -9,6 +9,7 @@ public class CoinController : MonoBehaviour
         {
             //efecto sparkle
             Instantiate(reward, transform.position, Quaternion.identity); //lo instancio en mi position sin rotation(quaternion)
+            
             //agrego moneda
             other.gameObject.GetComponent<PlayerInventory>().AddCoins();
 
