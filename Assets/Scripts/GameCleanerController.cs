@@ -12,9 +12,19 @@ public class GameCleanerController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerHealth>().MakeDead();
-//            SceneManager.LoadScene(0);
 
         }
-
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
+    public void StopGame()
+    {
+        Debug.Log("Quitting Game");
+        Application.Quit();
+    }
+    
 }

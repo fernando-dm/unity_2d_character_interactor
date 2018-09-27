@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour {
 
     public string EndText = "Ganaste";
-    public Image EndScreen;    
+    public Image EndScreen;
+    public CanvasGroup EndCGP;
+    public Text EndGameUIText;
     
     public void MakeDead()
     {
@@ -15,10 +17,13 @@ public class PlayerHealth : MonoBehaviour {
         EndScreen.color = Color.white;  // con esto me habilita la imagen que deshabilite con los alpha
 //        Instantiate(EndScreen, transform.position, Quaternion.identity);
         Destroy(gameObject);
+//        Destroy(gameObject.transform.root.gameObject);
     }
 
     public void EndGame()
     {
-            Debug.Log(EndText);
+        EndGameUIText.text= EndText;
+        EndCGP.alpha = 1;
+        Debug.Log(EndText);
     }
 }

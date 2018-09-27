@@ -20,6 +20,8 @@ public class CameraFollows : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        if(target == null) return; // fix, porque destruyo en health el player(target)
+
         var targetCamPos = target.position + offset;
         transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
     }
